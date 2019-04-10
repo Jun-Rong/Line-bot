@@ -59,16 +59,16 @@ function doPost(e) {
             replyMsg(replyToken, messageText, channelToken);
             break;
           case 'join':
-            pushMsg(channelToken, '我是IM Bot！Hello！', sourceId);
+            pushMsg(channelToken, '我是Bot！Hello！', sourceId);
             break;
           case 'leave':
             pushMsg(channelToken, 'Good Bye！', sourceId);
             break;
           case 'memberLeft':
-            pushMsg(channelToken, '我是IM Bot！Bye！', sourceId);
+            pushMsg(channelToken, '我是Bot！Bye！', sourceId);
             break;
           case 'memberJoined':
-            pushMsg(channelToken, '我是IM Bot！Hello~', sourceId);
+            pushMsg(channelToken, '我是Bot！Hello~', sourceId);
             break;
           case 'follow':
             pushMsg(channelToken, 'Hello！', sourceId);
