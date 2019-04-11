@@ -7,14 +7,14 @@ function replyMsg(replyToken, userMsg, channelToken) {
     'headers': {
       'Content-Type': 'application/json; charset=UTF-8',
       'Authorization': 'Bearer ' + channelToken,
-	},
-	'method': 'post',
-	'payload': JSON.stringify({
+    },
+    'method': 'post',
+    'payload': JSON.stringify({
       'replyToken': replyToken,
       'messages': [{'type': 'text', 'text': userMsg}]
-      })
-	};
-    UrlFetchApp.fetch(url, opt);
+    })
+  };
+  UrlFetchApp.fetch(url, opt);
 }
 // 發送訊息
 function pushMsg(channelToken, message, usrId) {
@@ -23,14 +23,14 @@ function pushMsg(channelToken, message, usrId) {
     'headers': {
       'Content-Type': 'application/json; charset=UTF-8',
       'Authorization': 'Bearer ' + channelToken,
-	},
-	'method': 'post',
-	'payload': JSON.stringify({
+    },
+    'method': 'post',
+    'payload': JSON.stringify({
       'to': usrId,
       'messages': [{'type': 'text', 'text': message}]
-      })
-	};
-    UrlFetchApp.fetch(url, opt);
+    })
+  };
+  UrlFetchApp.fetch(url, opt);
 }
 
 // e 是Line 給我們的資料
@@ -87,9 +87,7 @@ function doPost(e) {
 }
 
 var LineHelpers = (function (helpers) {
-  
   'use strict';
-  
   helpers.getSourceId = function (source) {
     try {
       switch (source.type) {
