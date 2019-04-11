@@ -104,8 +104,7 @@ var LineHelpers = (function (helpers) {
           console.log('LineHelpers, getSourceId, invalid source type!');
           break;
       }
-    }
-    catch (ex) {
+    } catch (ex) {
       console.log('LineHelpers, getSourceId, ex = ' + ex);
     }
   }; 
